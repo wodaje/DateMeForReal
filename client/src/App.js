@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {
   return (
     <div>
-      <AmplifySignOut />
       <Router>
         <Header />
         <Switch>
@@ -26,6 +25,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      <AmplifySignOut />
     </div>
   );
 };

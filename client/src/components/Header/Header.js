@@ -3,7 +3,9 @@ import "./Header.css";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/Home";
-import WcIcon from "@material-ui/icons/Wc";
+import WomanIcon from "@material-ui/icons/PregnantWoman";
+import ManIcon from "@material-ui/icons/Accessibility";
+
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -23,13 +25,13 @@ function Header() {
 
       <a href="/filter/male">
         <IconButton>
-          <WcIcon fontSize="large" className="header_icon" /> M
+          <ManIcon fontSize="large" className="header_icon" />
         </IconButton>
       </a>
 
       <a href="/filter/female">
         <IconButton>
-          <WcIcon fontSize="large" className="header_icon" /> F
+          <WomanIcon fontSize="large" className="header_icon" />
         </IconButton>
       </a>
     </div>

@@ -76,6 +76,7 @@ export default class UpdateUser extends Component {
           type="text"
         />
         <br />
+        <br></br>
         <label>Email</label>
         <br />
         <input
@@ -84,15 +85,17 @@ export default class UpdateUser extends Component {
           type="email"
         />
         <br />
+        <br></br>
         <label>
-          Gender
-          <select value={this.state.value} onChange={this.handleChange}>
+          Gender :
+          <select onChange={this.onChangeUserGender} value={this.state.value}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </label>
-        <input type="submit" value="Submit" />
         <br />
+        <br></br>
+        <br></br>
         <label>Age</label>
         <br />
         <input
@@ -100,16 +103,18 @@ export default class UpdateUser extends Component {
           value={this.state.age}
           type="number"
         />
+        <br></br>
+        <br></br>
         <br />
-        <label>Photo URL</label>
-        <br />
+        <h4>Photo URL</h4>
         <input
           onChange={this.onChangeUserUrl}
           value={this.state.url}
           name="url"
-          type="text"
+          type="url"
         />
         <br />
+        <br></br>
         <input className="submitButton" type="submit" value="Submit" />
       </form>
     );
