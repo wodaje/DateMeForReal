@@ -1,48 +1,32 @@
-import express from "express";
-import mongoose from "mongoose";
-import Users from "./models/userDb.js";
-import Cors from "cors";
-
-
+const express = require("express");
+const mongoose = require("mongoose");
+const User = require("./models/userDb.js");
+const Cors = require("cors");
+const routes = require("./routes");
 // App Config
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(Cors());
 
-
-// Connect to the Mongo DB
-mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/userdb",
-    { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
-);
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 // API endpoints
-app.get("/", (req, res) => res.status(200).send("Hello World!"));
+app.use(routes)
 
-app.post("/cards", (req, res) => {
-    const dbCard = req.body;
-
-    Users.create(dbCard, (err, data) => {
-        if (err) {
-            res.status(500).send(err);
-        } else {
-            res.status(201).send(data);
-        }
-    });
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userDb", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+  useCreateIndex: true,
 });
 
-app.get("/cards", (req, res) => {
-    Users.find((err, data) => {
-        if (err) {
-            res.status(500).send(err);
-        } else {
-            res.status(200).send(data);
-        }
-    });
-});
+
 
 // Listener
 
