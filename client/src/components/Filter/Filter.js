@@ -12,9 +12,11 @@ function Filters(props) {
     loadUsers();
   }, []);
 
-  // Loads all books and sets them to books
   function loadUsers() {
-    API.getGender()
+    const gender = window.location.href.split("/").pop();
+    // console.log("sex: ", sex);
+
+    API.getGender(gender)
       .then((res) => {
         console.log("Gender Response;", res);
         setPeople(res.data);

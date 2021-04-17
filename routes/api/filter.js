@@ -8,7 +8,7 @@ const userController = require("../../controllers/userController");
 
 // Matches with "/api/user/:id"
 router
-  .route("/filter/:gender")
+  .route("/:gender")
   .get(userController.findByGender)
   .put(userController.update)
   .delete(userController.remove);

@@ -21,17 +21,17 @@ function Header() {
         </IconButton>
       </Link>
 
-      <Link to="/filter/male">
+      <a href="/filter/male">
         <IconButton>
           <WcIcon fontSize="large" className="header_icon" /> M
         </IconButton>
-      </Link>
+      </a>
 
-      <Link to="/filter/female">
+      <a href="/filter/female">
         <IconButton>
-          <WcIcon fontSize="large" className="header_icon" />F
+          <WcIcon fontSize="large" className="header_icon" /> F
         </IconButton>
-      </Link>
+      </a>
     </div>
   );
 }

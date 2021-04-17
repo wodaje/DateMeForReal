@@ -1,6 +1,5 @@
 const db = require("../models");
 
-// Defining methods for the booksController
 module.exports = {
   findAll: function (req, res) {
     db.User.find(req.query)
@@ -14,7 +13,8 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findByGender: function (req, res) {
-    db.User.findMany(req.params.id)
+    console.log("Looking", req.params.gender);
+    db.User.find({ gender: req.params.gender })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));
   },
