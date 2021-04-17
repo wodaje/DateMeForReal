@@ -84,14 +84,17 @@ export default class UpdateUser extends Component {
                 value={this.state.email}
                 type='text'
             />
-            <br />
-            <label>Gender</label>
-            <br />
-            <input
-                onChange={this.onChangeUserGender}
-                value={this.state.gender}
-                type='text'
-            />
+            <form onSubmit={this.handleSubmit}>
+        <label>
+          Gender
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      
             <br />
             <label>Age</label>
             <br />
