@@ -1,29 +1,36 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "react-tinder-card"
 import "./Cards.css";
-import axios from "../../utils/axios";
+import API from "../../utils/API"
+// import axios from "../../utils/axios";
 // import Button from '@material-ui/core/Button';
 
-function UserCards() {
+function UserCards(props) {
     const [people, setPeople] = useState([]);
 
     useEffect(() => {
-        async function fetchData() {
-            const req = await axios.get("/cards");
+        loadUsers()
+    
+      }, [])
+    
+      // Loads all books and sets them to books
+      function loadUsers() {
+        API.getUsers()
+          .then(res => {
+            console.log(res)  
+            setPeople(res.data)
+          }, 
+          )
+          .catch(err => console.log(err));
+      };
 
-            setPeople(req.data);
 
-        }
-        fetchData();
-
-    }, [])
 
     return (
         <div>
 
             <div className="Cards">
                 <div className="Cards_cardContainer">
-
                     {people.map((person) => (
                         <UserCard
                             className="swipe"
@@ -37,6 +44,7 @@ function UserCards() {
                             </div>
                         </UserCard>
                     ))}
+
                 </div>
             </div >
         </div >
