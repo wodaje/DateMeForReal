@@ -1,9 +1,7 @@
 .footer {
-  position: bottom;
-  background-color: #fff;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  padding: 20px;
-  box-shadow: 0px 18px 53px 8=0px rgba(0, 0, 0, 0.3);
-  border-radius: cover;
-  background-position: center;
+  height: 2.5rem;
+  padding: 40px;
 }
