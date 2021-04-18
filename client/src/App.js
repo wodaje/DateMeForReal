@@ -6,7 +6,6 @@ import UserCards from "./components/Cards/Cards";
 import UpdateUser from "./components/Profile/Profile";
 import Filter from "./components/Filter/Filter";
 import Footer from "./components/Footer/Footer";
-import { AmplifySignOut } from "@aws-amplify/ui-react";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -29,7 +28,6 @@ const App = () => {
         </Switch>
       </Router>
       <Footer />
-      <AmplifySignOut />
     </div>
   );
 };
