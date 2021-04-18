@@ -1,0 +1,9 @@
+.footer {
+  position: bottom;
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 18px 53px 8=0px rgba(0, 0, 0, 0.3);
+  border-radius: cover;
+  background-position: center;
+}
