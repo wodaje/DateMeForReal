@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Filter from "react-tinder-card";
-import "./Filter.css";
+import "../Cards/Cards.css";
 import API from "../../utils/API";
 // import axios from "../../utils/axios";
 // import Button from '@material-ui/core/Button';
@@ -14,11 +14,11 @@ function Filters(props) {
 
   function loadUsers() {
     const gender = window.location.href.split("/").pop();
-    // console.log("sex: ", sex);
+
 
     API.getGender(gender)
       .then((res) => {
-        console.log("Gender Response;", res);
+
         setPeople(res.data);
       })
       .catch((err) => console.log(err));
@@ -37,13 +37,8 @@ function Filters(props) {
               <div
                 style={{ backgroundImage: `url(${person.url})` }}
                 className="card"
-              >
-                <h3 className="userInfo">
-                  <b>
-                    {person.name} | {person.age} | {person.email}
-                  </b>
-                </h3>
-              </div>
+              ></div>
+              <h3 className="userInfo"><b>{person.name} | {person.age} | {person.email}</b></h3>
             </Filter>
           ))}
         </div>
