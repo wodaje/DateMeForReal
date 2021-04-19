@@ -1,14 +1,30 @@
-import React from "react";
-import { AmplifySignOut } from "@aws-amplify/ui-react";
+import React, { useEffect } from "react";
 import "./App.css";
+import { withAuthenticator } from "@aws-amplify/ui-react";
 import Header from "./components/Header/Header";
-import UserCards from "./components/Cards/Cards";
 import UpdateUser from "./components/Profile/Profile";
 import Filter from "./components/Filter/Filter";
+import { AmplifySignOut } from "@aws-amplify/ui-react";
+import Footer from "./components/Footer/Footer";
+import Particles from "./components/layouts/Particles";
+import Home from "./components/pages/Home";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { animation } from "./animation";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const App = () => {
+function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: animation.duration,
+      once: animation.once,
+      disable: !animation.animate
+    })
+    // eslint-disable-next-line
+  }, [])
+
   return (
     <div>
       <Router>
@@ -16,18 +32,23 @@ const App = () => {
         <Switch>
           <Route path="/profile">
             <UpdateUser />
+            <br />
+            <AmplifySignOut />
           </Route>
           <Route path="/filter">
+            <Particles />
             <Filter />
+            <Particles />
           </Route>
           <Route path="/">
-            <UserCards />
+            <Home />
+            <Particles />
           </Route>
         </Switch>
+        <Footer />
       </Router>
-      <AmplifySignOut />
     </div>
   );
 };
 
-export default App;
+export default withAuthenticator(App);
