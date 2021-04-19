@@ -1,0 +1,75 @@
+* {
+	box-sizing: border-box
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff
+}
+
+.Header {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	height: 90vh;
+	font-family: Montserrat, sans-serif
+}
+
+.Header h1 {
+	color: #e96224;
+	margin: auto;
+	text-align: center;
+	font-size: 5.5rem;
+	position: absolute
+}
+
+.Header p {
+	margin-top: 125px
+}
+
+.particle {
+	position: absolute!;
+	margin: 0!important;
+	margin-top: -100vh!important
+}
+
+
+.line-1 {
+	position: relative;
+	top: 10%;
+	width: 12em;
+	margin: 0 auto;
+	border-right: 2px solid rgba(25, 25, 25, .75);
+	font-size: 180%;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	transform: translateY(-50%);
+	font-family: "Anonymous Pro", monospace!important
+}
+
+.anim-typewriter {
+	animation: typewriter 4s steps(27) 1s 1 normal both, blinkTextCursor .5s steps(27) infinite normal;
+    color: #e96224;
+}
+
+@keyframes typewriter {
+	from {
+		width: 0
+	}
+	to {
+		width: 15em
+	}
+}
+
+@keyframes blinkTextCursor {
+	from {
+		border-right-color: rgba(25, 25, 25, .75)
+	}
+	to {
+		border-right-color: transparent
+	}
+}
