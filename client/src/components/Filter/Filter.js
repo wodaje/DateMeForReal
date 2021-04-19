@@ -14,11 +14,11 @@ function Filters(props) {
 
   function loadUsers() {
     const gender = window.location.href.split("/").pop();
-    // console.log("sex: ", sex);
+
 
     API.getGender(gender)
       .then((res) => {
-        console.log("Gender Response;", res);
+
         setPeople(res.data);
       })
       .catch((err) => console.log(err));
@@ -38,7 +38,7 @@ function Filters(props) {
                 style={{ backgroundImage: `url(${person.url})` }}
                 className="card"
               ></div>
-              <h3 className="UserInfo">Planned Link to Bio/Self Statement</h3>
+              <h3 className="userInfo"><b>{person.name} | {person.age} | {person.email}</b></h3>
             </Filter>
           ))}
         </div>

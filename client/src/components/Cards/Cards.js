@@ -16,7 +16,7 @@ function UserCards(props) {
   function loadUsers() {
     API.getUsers()
       .then((res) => {
-        console.log(res);
+
         setPeople(res.data);
       })
       .catch((err) => console.log(err));
@@ -36,7 +36,7 @@ function UserCards(props) {
                 style={{ backgroundImage: `url(${person.url})` }}
                 className="card"
               ></div>
-              <h3 className="UserInfo">Planned Link to Bio/Self Statement</h3>
+              <h3 className="userInfo"><b>{person.name} | {person.age} | {person.email}</b></h3>
             </UserCard>
           ))}
         </div>

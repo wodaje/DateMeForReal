@@ -13,7 +13,7 @@ module.exports = {
       .catch((err) => res.status(422).json(err));
   },
   findByGender: function (req, res) {
-    console.log("Looking", req.params.gender);
+
     db.User.find({ gender: req.params.gender })
       .then((dbModel) => res.json(dbModel))
       .catch((err) => res.status(422).json(err));

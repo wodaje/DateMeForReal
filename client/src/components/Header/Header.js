@@ -2,42 +2,42 @@ import React from "react";
 import "./Header.css";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import IconButton from "@material-ui/core/IconButton";
-import WcIcon from "@material-ui/icons/Wc";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import FaceIcon from "@material-ui/icons/Face";
+import HomeIcon from '@material-ui/icons/Home';
+import { FaMale } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className="header">
-      <Link to="/profile">
-        <IconButton style={{ color: "#0d47a1" }}>
-          <AccountCircleIcon fontSize="large" className="header_icon" />
-          Profile
-        </IconButton>
-      </Link>
 
       <Link to="/">
-        <IconButton style={{ color: "red" }}>
-          <WcIcon fontSize="large" className="header_home" />
-          Matched
+        <IconButton>
+          <HomeIcon fontSize="large" className="header_icon" />
+          Home
         </IconButton>
       </Link>
 
       <a href="/filter/male">
-        <IconButton style={{ color: "#e91e63" }}>
-          Likes
-          <FavoriteIcon fontSize="large" className="header_icon" />
+        <IconButton>
+          <FaMale fontSize="large" className="header_icon" />
+          Male
         </IconButton>
       </a>
 
       <a href="/filter/female">
-        <IconButton style={{ color: "#8e24aa" }}>
-          ForMe
-          <FaceIcon fontSize="large" className="header_icon" />
+        <IconButton>
+          <FaFemale fontSize="large" className="header_icon" />
+          Female
         </IconButton>
       </a>
+      <Link to="/profile">
+        <IconButton>
+          <AccountCircleIcon fontSize="large" className="header_icon" />
+          Profile
+        </IconButton>
+      </Link>
     </div>
   );
 }

@@ -3,14 +3,11 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <hr></hr>
-      <br></br>
-      <h2 style={{ textAlign: "center" }}>
-        Date4Real @@ Date4Real @@ Date4Real
-      </h2>
-      {/* <SignOutBtn style={{ alignment: "right" }} /> */}
-      <br></br>
-      <hr></hr>
+      <hr />
+      <h3 style={{ textAlign: "center" }}>
+        &copy; Copyright 2021, Date4Real. Jeff Woda, Qi Feng, Alex Gold, Alexander Marzullo, Jalyn Campbell
+      </h3>
+      <hr />
     </div>
   );
 };
