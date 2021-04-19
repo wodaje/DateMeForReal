@@ -10,7 +10,7 @@ import Particles from "./components/layouts/Particles";
 import Home from "./components/pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { animation } from "./profile";
+import { animation } from "./animation";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -32,7 +32,6 @@ function App() {
         <Switch>
           <Route path="/profile">
             <UpdateUser />
-            <Particles />
             <br />
             <AmplifySignOut />
           </Route>
