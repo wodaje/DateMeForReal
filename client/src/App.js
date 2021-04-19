@@ -6,11 +6,11 @@ import UpdateUser from "./components/Profile/Profile";
 import Filter from "./components/Filter/Filter";
 import { AmplifySignOut } from "@aws-amplify/ui-react";
 import Footer from "./components/Footer/Footer";
-import Particles from './components/layouts/Particles';
-import Home from './components/pages/Home';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { animation } from './profile';
+import Particles from "./components/layouts/Particles";
+import Home from "./components/pages/Home";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { animation } from "./profile";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
