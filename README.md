@@ -76,8 +76,8 @@ This application is licensed under [MIT](https://github.com/qifeng86/DateMeForRe
   
 # Contributors
 
-Qi Feng: [https://github.com/qifeng86].
-Jeff Woda: [https://github.com/wodaje].
-Alex Gold: [https://github.com/johnbark855].
-Jalyn Campbell: [https://github.com/JCyberAI].
-Alexander Marzullo: [https://github.com/Amarz94].
+- Qi Feng: [https://github.com/qifeng86].
+- Jeff Woda: [https://github.com/wodaje].
+- Alex Gold: [https://github.com/johnbark855].
+- Jalyn Campbell: [https://github.com/JCyberAI].
+- Alexander Marzullo: [https://github.com/Amarz94].
