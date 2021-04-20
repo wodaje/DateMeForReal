@@ -45,7 +45,7 @@ App is listening on port 3000 when running on local machine. Run the following c
 
 App is deployed on Heroku. Access via link below:
 
-[https://datemeforreal.herokuapp.com//]
+[https://glacial-basin-52400.herokuapp.com/]
 
 # License
 
