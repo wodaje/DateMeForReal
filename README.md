@@ -17,6 +17,12 @@ The applicaition is a dating app built with React.
 
 # Installation
 
+
+
+Run the following command to install all required packages:
+
+- `npm i`
+
 This application requires the following dependencies:
 
 - Node
@@ -30,10 +36,6 @@ This application requires the following dependencies:
 - react-tinder-card
 - aos
 - react-particles-js
-
-Run the following command to install all required packages:
-
-- `npm i`
 
 # Usage
 
@@ -49,15 +51,6 @@ App is deployed on Heroku. Access via link below:
 # License
 
 This application is licensed under [MIT](https://github.com/qifeng86/DateMeForReal/blob/develop/LICENSE)
-
-# Contributing
-
-Qi Feng
-Jeff Woda
-Alex Gold
-Alexander Marzullo
-Jalyn Campbell
-
 
 # Builtwith
 - HTML
@@ -81,6 +74,10 @@ Jalyn Campbell
 - react-particles-js
 
   
-# Questions
+# Contributors
 
-Github Repo: [https://github.com/qifeng86/DateMeForReal].
+- Qi Feng: [https://github.com/qifeng86].
+- Jeff Woda: [https://github.com/wodaje].
+- Alex Gold: [https://github.com/johnbark855].
+- Jalyn Campbell: [https://github.com/JCyberAI].
+- Alexander Marzullo: [https://github.com/Amarz94].
