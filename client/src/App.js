@@ -10,7 +10,6 @@ import Home from "./components/pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { animation } from "./animation";
-
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
       once: animation.once,
       disable: !animation.animate,
     });
-    // eslint-disable-next-line
   }, []);
 
   return (
