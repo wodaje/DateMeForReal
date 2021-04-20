@@ -3,35 +3,42 @@ import "./Header.css";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import IconButton from "@material-ui/core/IconButton";
 import HomeIcon from "@material-ui/icons/Home";
-import WcIcon from "@material-ui/icons/Wc";
+import { FaMale } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
+import { AmplifySignOut } from "@aws-amplify/ui-react";
 import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className="header">
-      <Link to="/profile">
-        <IconButton>
-          <AccountCircleIcon fontSize="large" className="header_icon" />
-        </IconButton>
-      </Link>
-
       <Link to="/">
         <IconButton>
-          <HomeIcon fontSize="large" className="header_home" />
+          <HomeIcon fontSize="large" className="header_icon" />
+          Home
         </IconButton>
       </Link>
 
       <a href="/filter/male">
         <IconButton>
-          <WcIcon fontSize="large" className="header_icon" /> M
+          <FaMale fontSize="large" className="header_icon" />
+          Male
         </IconButton>
       </a>
 
       <a href="/filter/female">
         <IconButton>
-          <WcIcon fontSize="large" className="header_icon" /> F
+          <FaFemale fontSize="large" className="header_icon" />
+          Female
         </IconButton>
       </a>
+      <Link to="/profile">
+        <IconButton>
+          <AccountCircleIcon fontSize="large" className="header_icon" />
+          Profile
+        </IconButton>
+      </Link>
+
+      <AmplifySignOut />
     </div>
   );
 }
