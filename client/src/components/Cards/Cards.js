@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import UserCard from "react-tinder-card";
 import "./Cards.css";
 import API from "../../utils/API";
-// import axios from "../../utils/axios";
-// import Button from '@material-ui/core/Button';
+
 
 function UserCards(props) {
   const [people, setPeople] = useState([]);
@@ -12,7 +11,7 @@ function UserCards(props) {
     loadUsers();
   }, []);
 
-  // Loads all books and sets them to books
+  
   function loadUsers() {
     API.getUsers()
       .then((res) => {

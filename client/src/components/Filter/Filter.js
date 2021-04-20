@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Filter from "react-tinder-card";
 import "../Cards/Cards.css";
 import API from "../../utils/API";
-// import axios from "../../utils/axios";
-// import Button from '@material-ui/core/Button';
 
 function Filters(props) {
   const [people, setPeople] = useState([]);
