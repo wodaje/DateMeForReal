@@ -11,13 +11,6 @@ import Home from "./components/pages/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { animation } from "./animation";
-import React from "react";
-import { AmplifySignOut } from "@aws-amplify/ui-react";
-import "./App.css";
-import Header from "./components/Header/Header";
-import UserCards from "./components/Cards/Cards";
-import UpdateUser from "./components/Profile/Profile";
-import Filter from "./components/Filter/Filter";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
