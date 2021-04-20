@@ -4,7 +4,6 @@ import { withAuthenticator } from "@aws-amplify/ui-react";
 import Header from "./components/Header/Header";
 import UpdateUser from "./components/Profile/Profile";
 import Filter from "./components/Filter/Filter";
-import { AmplifySignOut } from "@aws-amplify/ui-react";
 import Footer from "./components/Footer/Footer";
 import Particles from "./components/layouts/Particles";
 import Home from "./components/pages/Home";
@@ -15,15 +14,14 @@ import { animation } from "./animation";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-
   useEffect(() => {
     AOS.init({
       duration: animation.duration,
       once: animation.once,
-      disable: !animation.animate
-    })
+      disable: !animation.animate,
+    });
     // eslint-disable-next-line
-  }, [])
+  }, []);
 
   return (
     <div>
@@ -33,7 +31,6 @@ function App() {
           <Route path="/profile">
             <UpdateUser />
             <br />
-            <AmplifySignOut />
           </Route>
           <Route path="/filter">
             <Particles />
@@ -49,6 +46,6 @@ function App() {
       </Router>
     </div>
   );
-};
+}
 
 export default withAuthenticator(App);
