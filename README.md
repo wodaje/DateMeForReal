@@ -7,17 +7,16 @@
 The applicaition is a dating app built with React.
 
 # Table of Contents
-* [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contribute)
-* [Built with](#Builtwith)
-* [Questions](#questions)
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contribute)
+- [Built with](#Builtwith)
+- [Questions](#questions)
 
 # Installation
-
-
 
 Run the following command to install all required packages:
 
@@ -46,13 +45,14 @@ App is listening on port 3000 when running on local machine. Run the following c
 
 App is deployed on Heroku. Access via link below:
 
-[https://glacial-basin-52400.herokuapp.com/]
+[https://datemeforreal.herokuapp.com//]
 
 # License
 
 This application is licensed under [MIT](https://github.com/qifeng86/DateMeForReal/blob/develop/LICENSE)
 
 # Builtwith
+
 - HTML
 - CSS
 - Google Fonts
@@ -73,7 +73,6 @@ This application is licensed under [MIT](https://github.com/qifeng86/DateMeForRe
 - aos
 - react-particles-js
 
-  
 # Contributors
 
 - Qi Feng: [https://github.com/qifeng86].
